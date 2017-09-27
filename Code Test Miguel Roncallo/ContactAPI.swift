@@ -59,7 +59,7 @@ class ContactAPI{
     }
     
     func loadContacts(){
-        contacts = Array(realm.objects(Contact.self))
+        contacts = Array(realm.objects(Contact.self).sorted(byKeyPath: "name"))
     }
 }
 

@@ -7,5 +7,7 @@ target 'Code Test Miguel Roncallo' do
     pod 'RealmSwift'
     pod 'IQKeyboardManagerSwift'
     pod 'Kingfisher', '~> 3.x'
+    pod 'HockeySDK'
+    
     
 end

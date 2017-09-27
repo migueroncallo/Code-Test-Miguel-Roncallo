@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import HockeySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ContactAPI.shared.loadContacts()
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        BITHockeyManager.shared().configure(withIdentifier: "54a52ce634b44f339f10def4bb46b2ad")
+        BITHockeyManager.shared().start()
+        BITHockeyManager.shared().authenticator.authenticateInstallation()
+        
         return true
     }
 
